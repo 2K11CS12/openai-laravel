@@ -1,0 +1,43 @@
+{
+    "name": "mangrio/openai-laravel",
+    "description": "Streamline OpenAI integration in Laravel for text generation.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "mangrio",
+        "laravel",
+        "chatgpt",
+        "openai",
+        "integration",
+        "AI",
+        "generative"
+    ],
+    "authors": [
+        {
+            "name": "Kalim",
+            "email": "engr.kalim123@email.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mangrio\\OpenAiLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mangrio\\OpenAiLaravel\\OpenAiLaravelServiceProvider"
+            ],
+            "aliases": {
+                "OpenAiLaravel": "Mangrio\\OpenAiLaravel\\Facades\\ChatGPTMockApi"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
