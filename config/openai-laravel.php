@@ -45,7 +45,7 @@ return [
     | Sets the maximum number of tokens in the generated response.
     | The default value is 4096, but it can be adjusted according to your requirements.
     */
-    'max_tokens' => env('OPENAI_MAX_TOKENS', 4096),
+    'max_tokens' => env('OPENAI_MAX_TOKENS', 4087),
 
     /*
     |--------------------------------------------------------------------------
@@ -75,5 +75,29 @@ return [
     | A positive value encourages the model to explore more topics, while a negative value narrows it down.
     | Default is 0, meaning no penalty.
     */
-    'presence_penalty' => env('OPENAI_PRESENCE_PENALTY', 0)
+    'presence_penalty' => env('OPENAI_PRESENCE_PENALTY', 0),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Prserve OpenAI API response in DB
+    |--------------------------------------------------------------------------
+    |
+    */
+    'preserve_response' => env('OPENAI_PRESERVE_RESPONSE', 0),
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Prseve migration file name
+    |--------------------------------------------------------------------------
+    |
+    */
+    'preserve_response_migration' => env('OPENAI_PRESERVE_RESPONSE_MIGRATION', 'create_openai_laravel_responses_table'),
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Prseve DB table name
+    |--------------------------------------------------------------------------
+    |
+    */
+    'preserve_response_table' => env('OPENAI_PRESERVE_RESPONSE_table', 'open_ai_laravel_responses')
 ];

@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('openai_laravel_responses', function (Blueprint $table) {
+        Schema::create('open_ai_laravel_responses', function (Blueprint $table) {
             $table->id();
             $table->longText('prompt');
             $table->string('hashsum');

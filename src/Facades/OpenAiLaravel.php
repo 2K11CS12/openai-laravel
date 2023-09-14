@@ -5,7 +5,7 @@ namespace Mangrio\OpenAiLaravel\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \YellowDigital\OpenAiLaravel\OpenAiLaravel
+ * @see \Mangrio\OpenAiLaravel\OpenAiLaravel
  */
 class OpenAiLaravel extends Facade
 {
