@@ -31,13 +31,8 @@ OPENAI_MODEL=gpt-3.5-turbo
 
 ```
 // Import the OpenAI facade at the top of your file
-use OpenAI;
-// Generate text using the OpenAI model
-$response = OpenAI::generateText('Write a short description of your usage here.');
-// Handle the response as needed
-```
+use Mangrio\OpenAiLaravel\Facades\OpenAiLaravel;
 
-```
 $response = OpenAiLaravel::generate('Prompt')
     ->key('your-api-key')
     ->temperature(1.0)
