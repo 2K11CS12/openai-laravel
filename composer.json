@@ -1,5 +1,5 @@
 {
-    "name": "2K11CS12/openai-laravel",
+    "name": "2k11cs12/openai-laravel",
     "description": "Streamline OpenAI integration in Laravel for text generation.",
     "type": "library",
     "license": "MIT",
@@ -38,12 +38,6 @@
             }
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/2K11CS12/openai-laravel"
-        }
-    ],
     "minimum-stability": "stable",
     "prefer-stable": true
 }
