@@ -3,7 +3,7 @@
     "description": "Streamline OpenAI integration in Laravel for text generation.",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "mangrio",
         "laravel",
@@ -34,7 +34,7 @@
                 "Mangrio\\OpenAiLaravel\\OpenAiLaravelServiceProvider"
             ],
             "aliases": {
-                "OpenAiLaravel": "Mangrio\\OpenAiLaravel\\Facades\\ChatGPTMockApi"
+                "OpenAiLaravel": "Mangrio\\OpenAiLaravel\\Facades\\OpenAiLaravel"
             }
         }
     },
