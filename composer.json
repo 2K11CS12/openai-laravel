@@ -38,6 +38,12 @@
             }
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/2K11CS12/openai-laravel"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
