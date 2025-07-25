@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Cache;
 use Mangrio\OpenAiLaravel\Models\OpenAiLaravelResponses;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schema;
+use Exception;
 
 class OpenAiLaravel
 {
@@ -171,12 +172,10 @@ class OpenAiLaravel
     {
         $cacheKey = $this->generateCacheKey($this->override['prompt']);
 
-        //return Cache::remember($cacheKey, now()->addMinutes(60), function () {
+        return \Cache::remember($cacheKey, now()->addMinutes(60), function () {
             $response = $this->fetchFromOpenAI();
             return $response;
-            // Cache the response
-            //return $this->cacheResponse($cacheKey, $response);
-        //});
+        });
     }
 
     private function fetchFromOpenAI()
@@ -187,7 +186,7 @@ class OpenAiLaravel
 
         // Merge the configuration values with overridden values
         $params = array_merge($this->config, $this->override);
-        $implodedKeys = implode(', ', $params['keys']);
+        // Removed undefined 'keys' usage
 
         $response = Http::withHeaders([
             'Authorization' => "Bearer {$openAiKey}",
